@@ -1,0 +1,74 @@
+header {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+@media (max-width: 420px) {
+    picture {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* Make minimum size so it dont keep shrinking */
+    }
+
+    figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        margin: 10px;
+    }
+    .images {
+        width: 90%;
+        margin-top: 10px;
+        box-shadow: 2px 2px 5px #999;
+    }
+    figcaption {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+    h2 {
+        font-size: 120%;
+    }
+    p {
+        font-size: 80%;
+    }
+}
+
+@media (min-width: 420px) {
+    picture {
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30%;
+        margin: 10px;
+    }
+    .images {
+        width: 90%;
+        margin-top: 10px;
+        box-shadow: 2px 2px 5px #999;
+    }
+    figcaption {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+    h2 {
+        font-size: 120%;
+    }
+    p {
+        font-size: 80%;
+    }
+}

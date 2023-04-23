@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>receptsida</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css' integrity='sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==' crossorigin='anonymous'/>
+    <link rel="stylesheet" href="receptsida-style.css">
+    <script src="receptsida.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>Receptsida </h1>
+    </header>
+	<main>
+        <div class="portion-image">
+            <img class="main-image" src="brownie.jpg">
+            <form class="portion-label-input">
+                <label class="portions" for="portions">Portions:</label>
+                <input class="portion-input" type="number" name="portions" value="24" min="1">
+
+                <div class="listor">
+                    <div class="ingredient-lista">
+                        <h2>Ingredienser</h2>
+                        <ul class="Ingredients">
+                            <li>Svenskt smör</li>
+                            <li>Kakao</li>
+                            <li>Ägg</li>
+                            <li>Strösocker</li>
+                            <li>Salt</li>
+                            <li>Vaniljpulver</li>
+                            <li>Vetemjöl</li>
+                            <li>Bakpulver</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="instruktioner-lista">
+                        <h2>Instruktioner</h2>
+                        <ol>
+                            <li>Sätt ugnen på 175°. Lägg bakplåtspapper i en fyrkantig form, ca 20x30 cm.</li>
+                            <li>Hacka nötterna. Smält smöret och rör ner kakao.2</li>
+                            <li>Rör ihop ägg och socker i en bunke. Vänd ner kakaoblandningen, salt, vaniljpulver, nötter och mjölet blandat med bakpulver</li>
+                            <li>Bred ut smeten i formen. Grädda i mitten av ugnen 20-25 min.</li>
+                            <li>Låt svalna och skär kakan i rutor. Förvara i kyl.</li>
+                        </ol>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <picture class="carousel">
+            <img src="hallongrottor.jpg" alt="Image 1">
+            <img src="hallongrottor.jpg" alt="Image 2">
+            <img src="hallongrottor.jpg" alt="Image 3">
+        </picture>
+
+        
+        <form class="review">
+            <label for="review">Review:</label>
+            <input type="text" name="user-review" placeholder="Write your review here..." ></textarea>
+        </form>
+
+        <ul class="submitted-user-reviews">
+        </ul>
+
+
+	</main>
+
+    <footer>
+        <button onclick=redirectToNewPage()>Return to main page </button>
+    </footer>
+
+</body>
+</html>
