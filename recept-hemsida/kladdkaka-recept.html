@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kladdkaka-recept</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css' integrity='sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==' crossorigin='anonymous'/>
+    <link rel="stylesheet" href="receptsida-style.css">
+    <script src="receptsida.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>Kladdkaka recept </h1>
+    </header>
+	<main>
+        <div class="portion-image">
+            <picture class="display-images">
+                <img class="display" src="kladdkaka.jpg">
+                <img class="display" src="kladdkaka2.jpeg">
+                <img class="display" src="kladdkaka3.jpeg">
+
+            </picture>
+            <form class="portion-label-input">
+                <label class="portions" for="portions">Portions:</label>
+                <input class="portion-input" type="number" name="portions" value="12" min="1">
+
+                <div class="listor">
+                    <div class="ingredient-lista">
+                        <h2>Ingredienser</h2>
+                        <ul class="Ingredients">
+                        </ul>
+                    </div>
+                    <div class="instruktioner-lista">
+                        <h2>Instruktioner</h2>
+                        <ol>
+                            <li>Sätt ugnen på 175°.</li>
+                            <li>Smält smöret i en kastrull. Lyft av kastrullen från plattan.</li>
+                            <li>Rör ner socker och ägg, blanda väl. Rör ner övriga ingredienser så att allt blir väl blandat</li>
+                            <li>Häll smeten i en smord och bröad form med löstagbar kant, ca 24 cm i diameter.</li>
+                            <li>Grädda mitt i ugnen ca 15 min. Kakan blir låg med ganska hård yta och lite kladdig i mitten.</li>
+                            <li>Låt kakan kallna. Pudra över florsocker. Servera med grädde eller glass och frukt.</li>
+                        </ol>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <h2>You may also like</h2>
+        <picture class="recomended">
+            <img src="brownie.jpg" alt="Button" onclick="redirectToNewPage('brownie-recept.html')">
+            <img src="hallongrotta2.jpeg" alt="Button" onclick="redirectToNewPage('hallongrotta-recept.html')">
+            <img src="kladdkaka.jpg" alt="Button" onclick="redirectToNewPage('kladdkaka-recept.html')">
+
+            <img src="brownie2.jpeg" alt="Button" onclick="redirectToNewPage('brownie-recept.html')">
+            <img src="hallongrotta2.jpeg" alt="Button" onclick="redirectToNewPage('hallongrotta-recept.html')">
+            <img src="kladdkaka2.jpeg" alt="Button" onclick="redirectToNewPage('kladdkaka-recept.html')">
+
+            <img src="brownie3.jpeg" alt="Button" onclick="redirectToNewPage('brownie-recept.html')">
+            <img src="kladdkaka3.jpeg" alt="Button" onclick="redirectToNewPage('kladdkaka-recept.html')">
+            <img src="hallongrotta3.jpeg" alt="Button" onclick="redirectToNewPage('hallongrotta-recept.html')">
+        </picture>
+
+
+        
+        <form class="review">
+            <label for="review">Review:</label>
+            <input type="text" name="user-review" placeholder="Write your review here..." ></textarea>
+        </form>
+
+        <ul class="submitted-user-reviews">
+        </ul>
+
+
+	</main>
+
+    <footer>
+        <button onclick=redirectToMainPage()>Return to main page </button>
+    </footer>
+
+</body>
+</html>

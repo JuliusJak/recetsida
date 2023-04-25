@@ -4,8 +4,19 @@ const items = document.querySelectorAll(".Ingredients li");
 const reviewInput = document.querySelector('input[name="user-review"]');
 const reviewList = document.querySelector('.submitted-user-reviews');
 
+const pageTitle = document.title;
+console.log(pageTitle); // Outputs the title of the current HTML page
 
-function redirectToNewPage() {
+
+  let portionsize;
+
+
+
+
+
+
+console.log(portionsize)
+function redirectToMainPage() {
     window.location.href = 'landningssida.html';
 }
 
@@ -18,26 +29,57 @@ portionInput.addEventListener('keydown', function(event) {
 
 function updateIngredients() {
   let portions = portionInput.value;
-  const additionalText = [
-    ` ${(250 / 24 * portions).toFixed(2)}g`,
-    ` ${(2 / 24 * portions).toFixed(2)}dl`,
-    ` ${(4 / 24 * portions).toFixed(2)}st`,
-    ` ${(4.5 / 24 * portions).toFixed(2)}dl`,
-    ` ${(0.5 / 24 * portions).toFixed(2)}tsk`,
-    ` ${(2 / 24 * portions).toFixed(2)}krm`,
-    ` ${(3 / 24 * portions).toFixed(2)}dl`,
-    ` ${(0.5 / 24 * portions).toFixed(2)}tsk`,
-  ];
+  let ingredients;
 
-  items.forEach((item, index) => {
-    item.textContent = item.textContent.split(':')[0] + ': ' + additionalText[index];
+  if (pageTitle.includes('brownie')) {
+    portionsize = 24;
+    ingredients = browni = [
+      `Svenskt smör ${(250 / portionsize * portions).toFixed(1)}g`,
+      `Kakao ${(2 / portionsize * portions).toFixed(1)}dl`,
+      `Ägg ${(4 / portionsize * portions).toFixed(1)}st`,
+      `Strösocker ${(4.5 / portionsize * portions).toFixed(1)}dl`,
+      `Salt ${(0.5 / portionsize * portionsize).toFixed(1)}tsk`,
+      `Vaniljpulver ${(2 / portionsize  * portionsize).toFixed(1)}krm`,
+      `Vetemjöl ${(3 / portionsize * portions).toFixed(1)}dl`,
+      `Bakpulver ${(0.5 / portionsize * portionsize).toFixed(1)}tsk`
+    ];
+    
+  } else if (pageTitle.includes('kladdkaka')) {
+    portionsize = 12;
+    ingredients =  kladdkaka = [
+      `Svenskt smör ${(100 / portionsize * portions).toFixed(1)}g`,
+      `Kakao ${(3 / portionsize * portions).toFixed(1)}msk`,
+      `Ägg ${(2 / portionsize * portions).toFixed(1)}st`,
+      `Strösocker ${(2.5 / portionsize * portions).toFixed(1)}dl`,
+      `Vetemjöl ${(1 / portionsize * portions).toFixed(1)}dl`,
+      `Vaniljsocker ${(1 / portionsize * portions).toFixed(1)}tsk`
+    ];
+  
+  } else if (pageTitle.includes('hallongrotta')) {
+    portionsize = 22;
+    ingredients = hallongrotta = [
+      `Svenskt smör ${(200 / portionsize * portions).toFixed(1)}g`,
+      `Strösocker ${(1 / portionsize * portions).toFixed(1)}dl`,
+      `Vaniljsocker ${(2 / portionsize  * portionsize).toFixed(1)}tsk`,
+      `Vetemjöl ${(4.5 / portionsize * portions).toFixed(1)}dl`,
+      `Bakpulver ${(1 / portionsize * portionsize).toFixed(1)}tsk`,
+      `Fast hallonsylt ${(1 / portionsize * portionsize).toFixed(1)}dl`
+    ];
+  
+  }
+
+  ingredientsList.innerHTML = '';
+
+  ingredients.forEach(ingredient => {
+    const li = document.createElement('li');
+    li.textContent = ingredient;
+    ingredientsList.appendChild(li);
   });
 }
 
+
 portionInput.addEventListener('input', updateIngredients);
-
-updateIngredients();
-
+updateIngredients()
 
 reviewInput.addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
@@ -51,3 +93,7 @@ reviewInput.addEventListener('keydown', (event) => {
       }
     }
 });
+
+function redirectToNewPage(url) {
+  window.location.href = url;
+}
