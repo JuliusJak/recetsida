@@ -46,7 +46,7 @@ function updateIngredients() {
       `Vetemjöl ${(1 / portionsize * portions).toFixed(1)}dl`,
       `Vaniljsocker ${(1 / portionsize * portions).toFixed(1)}tsk`
     ];
-  
+
   } else if (pageTitle.includes('hallongrotta')) {
     portionsize = 22;
     ingredients = hallongrotta = [
@@ -57,7 +57,7 @@ function updateIngredients() {
       `Bakpulver ${(1 / portionsize * portionsize).toFixed(1)}tsk`,
       `Fast hallonsylt ${(1 / portionsize * portionsize).toFixed(1)}dl`
     ];
-  
+
   }
 
   ingredientsList.innerHTML = '';
