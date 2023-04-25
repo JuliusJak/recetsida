@@ -5,15 +5,7 @@ const reviewInput = document.querySelector('input[name="user-review"]');
 const reviewList = document.querySelector('.submitted-user-reviews');
 
 const pageTitle = document.title;
-console.log(pageTitle); // Outputs the title of the current HTML page
-
-
-  let portionsize;
-
-
-
-
-
+let portionsize;
 
 console.log(portionsize)
 function redirectToMainPage() {
