@@ -6,8 +6,20 @@ const reviewList = document.querySelector('.submitted-user-reviews');
 
 const pageTitle = document.title;
 let portionsize;
+let randomName;
 
-console.log(portionsize)
+const firstNames = [
+  "Sophia", "Liam", "Olivia", "Noah", "Emma", "Jackson","Ava",  "Lucas",  "Isabella",  "Aiden",  
+  "Mia", "Caden",  "Charlotte",  "Grayson",  "Amelia",  "Elijah",  "Harper",  "Logan",  "Evelyn",
+  "Carter",  "Abigail",  "Mason",  "Emily",  "Ethan",  "Avery",  "Landon",  "Sofia",  "Oliver",
+  "Madison",  "Levi"
+];
+const lastNames = ["Smith", "Johnson", "Brown", "Taylor", "Miller", "Davis", "Garcia", "Rodriguez",
+ "Martinez", "Hernandez", "Lopez", "Gonzalez", "Perez", "Sanchez", "Ramirez", "Flores", "Rivera", 
+ "Torres", "Gomez", "Reyes", "Washington", "Lee", "Chen", "Wang", "Liu", "Singh", "Kim", "Nguyen",
+  "Ali", "Khan"
+];
+
 function redirectToMainPage() {
     window.location.href = 'landningssida.html';
 }
@@ -73,13 +85,15 @@ function updateIngredients() {
 portionInput.addEventListener('input', updateIngredients);
 updateIngredients()
 
+
 reviewInput.addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
+      generateRandomName()
       event.preventDefault();
       const reviewText = event.target.value.trim();
       if (reviewText) { 
         const newReview = document.createElement('li');
-        newReview.textContent = reviewText;
+        newReview.textContent = reviewText + ' -'+randomName;
         reviewList.appendChild(newReview);
         event.target.value = '';
       }
@@ -88,4 +102,15 @@ reviewInput.addEventListener('keydown', (event) => {
 
 function redirectToNewPage(url) {
   window.location.href = url;
+}
+
+
+
+function generateRandomName(){
+  const randomIndex = Math.floor(Math.random() * lastNames.length);
+  const randomLastName = lastNames[randomIndex];
+  const randomFirstName = firstNames[randomIndex];
+  
+  console.log(randomFirstName +' '+ randomLastName);
+  randomName = randomFirstName +' '+ randomLastName 
 }

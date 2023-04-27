@@ -43,9 +43,18 @@ img{
     border-radius: 15px;
 }
 
+.submitted-user-reviews{
+    border: 2px groove rgba(0, 0, 0, 0.2);
+
+}
+
 .submitted-user-reviews li{
     box-shadow: 2px 2px 5px #999;
-
+    margin: 10px;
+    margin-left: 0;
+}
+.review{
+    padding: 5px;
 }
 
 @media (max-width: 420px) {
@@ -62,7 +71,6 @@ img{
     .display-images{
         display: flex;
         flex-direction: row;
-        /*insert carousel*/
         max-height: fit-content;
         overflow: auto;
         padding: 5px;
@@ -88,6 +96,7 @@ img{
         flex-wrap: wrap;
         padding: 5px;
         max-width: fit-content;
+
     }
 
     .portion-image {
@@ -111,6 +120,6 @@ img{
     }
 
     .portion-label-input{
-        width: 66%;
+        max-width: 50%;
     }
 }
