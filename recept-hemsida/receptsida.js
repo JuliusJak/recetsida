@@ -88,10 +88,10 @@ updateIngredients()
 
 reviewInput.addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
-      generateRandomName()
       event.preventDefault();
       const reviewText = event.target.value.trim();
       if (reviewText) { 
+        generateRandomName()
         const newReview = document.createElement('li');
         newReview.textContent = reviewText + ' -'+randomName;
         reviewList.appendChild(newReview);
